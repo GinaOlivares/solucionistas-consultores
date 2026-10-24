@@ -23,11 +23,11 @@ Crea un repositorio vacío en GitHub, sin inicializar README. Desde esta carpeta
 git add app.py assets .streamlit/config.toml requirements.txt README.md .gitignore tests .github
 git commit -m "Implementa sitio corporativo de Solucionistas Consultores"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/solucionistas-consultores.git
+git remote add origin https://github.com/GinaOlivares/solucionistas-consultores.git
 git push -u origin main
 ```
 
-Sustituye `TU_USUARIO` por tu usuario. Si `origin` ya existe, revisa `git remote -v` antes de modificarlo. Los documentos originales pueden permanecer locales; no son necesarios en producción. No subas `.venv`, credenciales ni archivos de `tmp`.
+Si `origin` ya existe, revisa `git remote -v` antes de modificarlo. Los documentos originales pueden permanecer locales; no son necesarios en producción. No subas `.venv`, credenciales ni archivos de `tmp`.
 
 ## Streamlit Community Cloud
 
@@ -74,6 +74,7 @@ Documentación de despliegue: https://docs.streamlit.io/deploy/streamlit-communi
 - El servidor `streamlit run app.py` inicia correctamente.
 - Se revisó la composición en navegador a 1440 px y los servicios/contacto a 390 px, con navegación a las secciones y sin desbordamiento horizontal.
 - El contenido se inserta con `st.html` (sin iframe) para preservar etiquetas semánticas y anclas. El CSS local se aplica mediante `st.markdown`.
-- El proyecto queda preparado en esta carpeta; todavía no se ha subido a GitHub ni publicado en Community Cloud.
+- Código disponible en https://github.com/GinaOlivares/solucionistas-consultores.
+- Despliegue configurado en Streamlit Community Cloud con `main`, `app.py` y Python 3.11.
 
 Actualización de identidad: se utiliza el archivo `logo.png` suministrado posteriormente por la usuaria. En la página se aplica un filtro CSS de silueta blanca para eliminar el contorno gris y mantener su transparencia, sin marco ni sombra. Se incorpora el eslogan «Ciencia que transforma industrias» en el hero.
